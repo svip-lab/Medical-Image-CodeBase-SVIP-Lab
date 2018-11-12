@@ -1,6 +1,6 @@
-## Medical Image Codebase@SVIP Lab
-# GAN
+# Medical Image Codebase@SVIP Lab
+## GAN
 pix2pix
 
-# Segmentation
+## Segmentation
 Unet with BN
