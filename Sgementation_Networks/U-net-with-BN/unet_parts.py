@@ -1,3 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+-------------------------------------------------
+   File Name:       unet_parts
+   Project Name:    ComputerVision_CodeBase_SVIP_Lab
+   Author :         Kang ZHOU
+   Date:            2018/11/12
+-------------------------------------------------
+   Change Activity:
+                   2018/11/12:
+-------------------------------------------------
+"""
 # sub-parts of the U-Net model
 
 import torch
@@ -36,6 +48,7 @@ class inconv(nn.Module):
         return x
 
 
+# TODO: optimize, using CNN
 class down(nn.Module):
     def __init__(self, in_ch, out_ch):
         super(down, self).__init__()
@@ -72,10 +85,10 @@ class up(nn.Module):
         x = self.conv(x)
         return x
 
-class up_wang(nn.Module):
+class up_wo_skip(nn.Module):
     def __init__(self, in_ch, out_ch, bilinear=True):
-        super(up_wang, self).__init__()
-
+        super(up_wo_skip, self).__init__()
+        #  without skip-connection
         #  would be a nice idea if the upsampling could be learned too,
         #  but my machine do not have enough memory to handle all those weights
         if bilinear:
@@ -112,5 +125,13 @@ class cls_conv_d(down):
         super(cls_conv_d, self).__init__()
 
 
+def main():
+    # tb(Traceback.colour) function should be removed
+    import tb
+    tb.colour()
+
+    # user code
 
 
+if __name__ == '__main__':
+    main()

@@ -1,3 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+-------------------------------------------------
+   File Name:       unet
+   Project Name:    ComputerVision_CodeBase_SVIP_Lab
+   Author :         Kang ZHOU
+   Date:            2018/11/12
+-------------------------------------------------
+   Change Activity:
+                   2018/11/12:
+-------------------------------------------------
+"""
 from .unet_parts import *
 
 class UNet(nn.Module):
@@ -29,8 +41,11 @@ class UNet(nn.Module):
 
 
 def main():
+    # tb(Traceback.colour) function should be removed
     import tb
     tb.colour()
+
+    # user code
 
 
 if __name__ == '__main__':
