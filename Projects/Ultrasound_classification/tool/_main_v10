@@ -1,0 +1,5 @@
+# node 27
+python  main_resnet.py         --version v10_01_ResNetBaseline   \
+                                    --gpu 0 1 2 3    --batch 32    \
+                                    --lr 0.01
+
