@@ -9,3 +9,6 @@ pix2pix
 
 ## Segmentation
 Unet with BN
+
+## utils
+visdom based visualizer
