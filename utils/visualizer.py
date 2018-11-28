@@ -12,9 +12,6 @@
 """
 import visdom
 import numpy as np
-import torch
-
-import pdb
 
 
 class Visualizer(object):
